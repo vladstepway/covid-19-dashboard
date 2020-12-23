@@ -1,0 +1,41 @@
+$keyboard--bg-color: #ffffff85;
+$keyboard--shadow-color:#ffffff9d;
+$keyboard--push-color:#ffb4fb;
+
+.keyboard {
+  display: flex;
+  position: fixed;
+  bottom: -100%;
+  left: 20%;
+  padding: 5px;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  background-color: $keyboard--bg-color;
+  box-shadow: 0 0 10px $keyboard--shadow-color;
+  transition: .4s;
+  &.show {
+    bottom: 50%;
+    left: 20%;
+  }
+  .btn {
+    border: 1px solid $keyboard--shadow-color;
+    &:hover {
+      box-shadow: 0 0 5px $keyboard--shadow-color;
+    }
+    &:active {
+      color: $keyboard--push-color;
+      text-shadow: 0 0 2px $keyboard--push-color;
+      border-color: $keyboard--push-color;
+      box-shadow: 0 0 5px $keyboard--push-color;
+    }
+    &[data-key="char"] {
+      min-width: 40px;
+    }
+    &[data-key="space"] {
+      width: 115px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+#header {
+  grid-area: header;
+}
+
+.header {
+  background-color: $gray-400;
+
+  &__time {
+    @media (max-width: 1000px) {
+      font-size: 14px !important;
+    }
+  }
+
+  &__title {
+    @media (max-width: 1000px) {
+      font-size: 24px !important;
+    }
+  }
+}

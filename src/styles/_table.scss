@@ -1,0 +1,16 @@
+#table {
+  grid-area: table;
+}
+
+.table__image {
+  display: none;
+  &-container {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.screen-element_full-screen .table__image {
+  display: block;
+}

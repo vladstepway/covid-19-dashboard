@@ -1,0 +1,11 @@
+#list {
+  grid-area: list;
+}
+
+.table-container {
+  max-height: 520px;
+}
+
+.screen-element_full-screen > .table-container {
+  max-height: 100%;
+}

@@ -1,0 +1,15 @@
+#chart {
+  grid-area: chart;
+}
+
+.chart {
+  &-controls {
+    width: 100%;
+    height: 20%;
+  }
+  &-container {
+    position: relative;
+    width: 100%;
+    height: 80%;
+  }
+}

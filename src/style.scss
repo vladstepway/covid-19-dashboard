@@ -1,0 +1,100 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "styles/cases";
+@import "styles/chart";
+@import "styles/footer";
+@import "styles/header";
+@import "styles/list";
+@import "styles/map";
+@import "styles/table";
+@import "styles/keyboard";
+@import "styles/leaflet";
+
+body {
+  color: $gray-800;
+}
+
+#app {
+  background-color: $gray-100;
+}
+
+.screen-element_full-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: rgb(255, 255, 255);
+  padding: 0 5%;
+  animation: scale 1s linear;
+}
+
+@keyframes spread {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(100);
+  }
+}
+
+.flag-image {
+  max-width: 32px;
+}
+
+#mapid {
+  height: 800px;
+}
+
+#app {
+  display: grid;
+  grid-template-areas:  "header   header  header"
+                        "cases    map     table"
+                        "list     map     table"
+                        "list     map     table"
+                        "list     map     chart"
+                        "footer   footer  footer";
+  grid-template-rows:    60px 90px 40px 40px 1fr 60px;
+  grid-template-columns: 2fr 6fr 350px;
+  min-height: 100vh;
+  overflow: hidden;
+
+  @media (max-width: 1000px) {
+    grid-template-areas:  "header"
+                          "cases"
+                          "table"
+                          "list"
+                          "map"
+                          "chart"
+                          "footer";
+    grid-template-rows:    80px 70px 170px 720px 1fr 500px 80px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: black;
+}
+
+.loading__image {
+  display: block;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
