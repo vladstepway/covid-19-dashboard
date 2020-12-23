@@ -6,7 +6,7 @@ Thank you for visiting our Dashboard an application for tracking the spread of C
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b62700c9-f8d1-4e0f-ae6b-916749a4daa2/deploy-status)](https://app.netlify.com/sites/vladstepway-covid-dashboard/deploys)
 
-[DEMO] : (https://vladstepway-covid-dashboard.netlify.app/)
+[DEMO](https://vladstepway-covid-dashboard.netlify.app/)
 
 DOWNLOAD
 ------------
